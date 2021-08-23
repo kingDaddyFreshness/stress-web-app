@@ -1,10 +1,10 @@
-### stress-web-app
+# stress-web-app
 
 A simple docker-based web service for stressing and testing infrastructure.  The service has 4 endpoints - 2 of which can have their responses manipulated by one of the other endpoints.
 
 ## Endpoints
 
-# Version
+### Version
 
 ```
 /test-service-webapp/webapi/version
@@ -12,7 +12,7 @@ A simple docker-based web service for stressing and testing infrastructure.  The
 
 Returns the version of the web service.  This response cannot be manipulated by the other endpoints
 
-# HealthCheck
+### HealthCheck
 
 ```
 /test-service-webapp/webapi/healthCheck
@@ -20,7 +20,7 @@ Returns the version of the web service.  This response cannot be manipulated by 
 
 Returns the healthCheck of the web service.  This http response code is 200 by default but can be modified via the Parameters endpoint (see below).
 
-# DynamicResource
+### DynamicResource
 
 ```
 /test-service-webapp/webapi/dynamicResource
@@ -28,7 +28,7 @@ Returns the healthCheck of the web service.  This http response code is 200 by d
 
 This is the primary endpoint for manipulation via the Parameters endpoint (see below).  By default, the endpoint returns an http response code of 200 and a body containing the ipAddress of the server node on which the service is running.  Both of these properties (as well as others) can be modified via the Parameters endpoint (see below).
 
-# Parameters
+### Parameters
 
 ```
 /test-service-webapp/webapi/parameters?cpuBurnTimeMS=30&responseTimeMS=10&responseCode=203&healthCheck=201&responseBodyB64=eyJhIjogNX0=
