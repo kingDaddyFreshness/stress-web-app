@@ -48,7 +48,7 @@ public class Parameters {
             mgv.setHealthCheck(healthCheck);
         }
 
-        if (responseBodyB64 != null) {
+        if ((responseBodyB64 != null) && (responseBodyB64.length() > 0)) {
             byte[] decodedBytes = Base64.getDecoder().decode(responseBodyB64);
             String decodedString = new String(decodedBytes);
             // test that this is valid json...
@@ -58,7 +58,7 @@ public class Parameters {
                 myResponse.setMessage(decodedString);
             } catch (IOException e) {
                 myResponse.setMessage("invalid json");
-                e.printStackTrace();
+                //e.printStackTrace();
             }
         } else {
             mgv.setResponseBody(null);

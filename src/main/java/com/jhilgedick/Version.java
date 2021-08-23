@@ -19,7 +19,7 @@ public class Version {
     public Response doIt() {
 
         MyResponse myResponse = new MyResponse();
-        myResponse.setMessage("version: v1.0.2");
+        myResponse.setMessage("version: v1.0.3");
         String json = "";
         ObjectMapper mapper = new ObjectMapper().enable(SerializationFeature.INDENT_OUTPUT);
         try {
